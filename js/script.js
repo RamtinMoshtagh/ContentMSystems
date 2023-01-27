@@ -2,10 +2,8 @@ const navItemDropDownList = document.querySelectorAll('.nav-item-dropdown');
 const navTogglerOpen = document.querySelector('.navbar-toggler-open');
 const navTogglerClose = document.querySelector('.navbar-toggler-close');
 const navbarCollapseDiv = document.querySelector('.navbar-collapse');
-
 navItemDropDownList.forEach((navItem) => {
     navItem.addEventListener('click', () => {
-        // console.log(navItem);
         navItem.nextElementSibling.classList.toggle('show-dropdown');
         if(navItem.firstElementChild.className == "fas fa-chevron-down"){
             navItem.firstElementChild.className = "fas fa-chevron-up";
@@ -14,15 +12,12 @@ navItemDropDownList.forEach((navItem) => {
         }
     });
 });
-
 navTogglerOpen.addEventListener('click', () =>{
     navbarCollapseDiv.classList.add('show-navbar');
 });
-
 navTogglerClose.addEventListener('click', () => {
     navbarCollapseDiv.classList.remove('show-navbar');
 });
-
 // animation and transition stopper
 let resizeTimer;
 window.addEventListener('resize', () => {
@@ -32,13 +27,11 @@ window.addEventListener('resize', () => {
         document.body.classList.remove('resize-animation-stopper');
     }, 400);
 });
-
 let form = document.querySelecter('form');
-
-form.addEventListener('submit', (e) => {
+/* form.addEventListener('submit', (e) => {
   e.preventDefault();
   return false;
-});
+}); */
 
 
 
