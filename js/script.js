@@ -18,7 +18,6 @@ navTogglerOpen.addEventListener('click', () =>{
 navTogglerClose.addEventListener('click', () => {
     navbarCollapseDiv.classList.remove('show-navbar');
 });
-// animation and transition stopper
 let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('resize-animation-stopper');
@@ -28,10 +27,3 @@ window.addEventListener('resize', () => {
     }, 400);
 });
 let form = document.querySelecter('form');
-/* form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  return false;
-}); */
-
-
-
